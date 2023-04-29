@@ -21,8 +21,11 @@ p = dict()
 loc_list = df["location"].unique().tolist()
 for ind, loc in enumerate(loc_list):
     p[loc] = ind
+
+s = {'Unfurnished':2, 'Furnished':0, 'Semi-Furnished':1}
 location = st.selectbox(label = "Choose location", options = loc_list)
 if st.button('Predict House Price'):
-    cost = predict([area, p[location], status, bedroom])
+    features = np.array([area, p[location], s[status], bedroom]).reshape(-1,1)
+    cost = predict()
     st.text(cost[0])
 
