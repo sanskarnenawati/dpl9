@@ -14,7 +14,7 @@ area = st.slider('Area of the house', 1000, 5000, 1500)
 bedroom = st.number_input('No. of bedrooms')
 
 # no. of balconies in the house
-status = st.radio('enter furnishing status', ('furnished',"unfurnished","semifurnished"))
+status = st.radio('enter furnishing status', ('Unfurnished', 'Furnished', 'Semi-Furnished'))
 
 # location = df['location'].drop_duplicates()
 p = dict()
