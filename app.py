@@ -23,6 +23,6 @@ for ind, loc in enumerate(loc_list):
     p[loc] = ind
 location = st.selectbox(label = "Choose location", options = loc_list)
 if st.button('Predict House Price'):
-    cost = predict(np.array([area, p[location], status, bedroom]))
+    cost = predict([area, p[location], status, bedroom])
     st.text(cost[0])
 
