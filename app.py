@@ -26,6 +26,6 @@ s = {'Unfurnished':2, 'Furnished':0, 'Semi-Furnished':1}
 location = st.selectbox(label = "Choose location", options = loc_list)
 if st.button('Predict House Price'):
     features = np.array([area, p[location], s[status], bedroom]).reshape(-1,1)
-    cost = predict()
+    cost = predict(features)
     st.text(cost[0])
 
